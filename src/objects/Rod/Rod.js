@@ -5,9 +5,9 @@ import {resources} from "../../Resource.js";
 import {events} from "../../Events.js";
 import {GET_REMEDY, storyFlags} from "../../StoryFlags.js";
 
-import getSound from "../sound/get-item.mp3";
+import getSoundR from "../sound/get-remedy.mp3";
 
-const getRod = new Audio(getSound)
+const getRodR = new Audio(getSoundR)
 
 
 export class Rod extends GameObject {
@@ -49,7 +49,7 @@ export class Rod extends GameObject {
   storyFlags.add(GET_REMEDY);
 
 
-getRod.play();
+getRodR.play();
   }
 
 
