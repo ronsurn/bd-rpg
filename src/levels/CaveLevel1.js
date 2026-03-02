@@ -121,7 +121,7 @@ const npcNai = new NpcNai(gridCells(8), gridCells(1), {
       content: [
              
         {
-          string: "Visit Instagram nrtech2026, you'll get your treasure",
+          string: "Visit Instagram nRtech2026, you'll get your treasure",
           requires: [USE_BALL],
         },
         {

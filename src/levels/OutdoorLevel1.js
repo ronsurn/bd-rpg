@@ -53,7 +53,7 @@ const npcMaa = new NpcMaa(gridCells(11), gridCells(3), {
           requires: [USE_REMEDY],
         },
         {
-          string: "Sweety!, thanks for the water, BTW, Paa can wipe out your ghost issue",
+          string: "Sweety!, thanks for the water, BTW, Paa+ can wipe out your ghost issue",
           requires: [GET_MELON],
           //addsFlag: USE_MELON,
                             },
@@ -107,7 +107,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
           requires: [USE_REMEDY],
         },
         {
-          string: "Thank you for the Remedy !!! , NiNah, I'm good now .... and ....",
+          string: "Thank you for the Remedy !!! , Ni-Nah, I'm good now .... and ....",
           requires: [GET_REMEDY],
           //bypass: [GET_REMEDY],
           addsFlag: USE_REMEDY,
