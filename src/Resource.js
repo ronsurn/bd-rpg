@@ -24,6 +24,7 @@ class Resources {
       ghost: "/sprites/ghost-sheet.png",
       monkey: "/sprites/monkey-sheet.png",
       toh: "/sprites/toh-sheet.png",
+      ron: "/sprites/ron-sheet.png",
       // HUD
       textBox: "/sprites/text-box.png",
       fontWhite: "/sprites/sprite-font-white.png",

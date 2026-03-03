@@ -9,8 +9,9 @@ import {Rod} from "../objects/Rod/Rod.js";
 import {events} from "../Events.js";
 import {CaveLevel1} from "./CaveLevel1.js";
 import {NpcMaa} from "../objects/Npc/Npc-maa.js";
+import {NpcRon} from "../objects/Npc/Npc-ron.js";
 import {NpcGhost} from "../objects/Npc/NPC-ghost.js";
-import {storyFlags,GET_MELON, USE_MELON, GET_GLOVE, USE_GLOVE, GET_BALL,USE_BALL,GET_REMEDY, USE_REMEDY, GET_BANANA,USE_BANANA } from "../StoryFlags.js";
+import {storyFlags,GET_MELON, GET_GLOVE, USE_GLOVE, GET_BALL,GET_REMEDY, USE_REMEDY, GET_BANANA,USE_BANANA } from "../StoryFlags.js";
 import {Npc} from "../objects/Npc/Npc.js";
 import {NpcMonkey} from "../objects/Npc/Npc-monkey.js";
 import {Ball} from "../objects/Rod/Ball.js";
@@ -75,7 +76,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
           
         
         {
-          string: "Meloon ! !! Tank-Koo .... I leave after FinNid Meloon ",
+          string: "Woter Meloon ! !! Tank-Koo .... I leave after FinNid Woter Meloon ",
           requires: [GET_BANANA],
           addsFlag: USE_BANANA,
                             },
@@ -146,6 +147,25 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
 
 
 /////////////////////////////////////////////////////////////////////
+
+
+const npcRon = new NpcRon(gridCells(42), gridCells(4), {
+      content: [
+             
+        {
+          string: "Nong-Nah HBD, After you graduated, may I ask you something ?",
+          requires: [],
+        }
+      ],
+      portraitFrame: 7
+    })
+   this.addChild(npcRon);
+
+
+////////////////////////////////////////////////////////////////////
+
+
+
 
 const ball = new Ball(gridCells(11), gridCells(10))
 //this.addChild(ball)
