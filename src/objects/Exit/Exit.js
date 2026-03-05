@@ -4,6 +4,9 @@ import {Sprite} from "../../Sprite.js";
 import {resources} from "../../Resource.js";
 import {events} from "../../Events.js";
 
+
+
+
 export class Exit extends GameObject {
   constructor(x, y) {
     super({
@@ -16,14 +19,47 @@ export class Exit extends GameObject {
     this.drawLayer = "FLOOR";
   }
 
-  ready() {
-    events.on("HERO_POSITION", this, pos => {
-      // detect overlap...
-      const roundedHeroX = Math.round(pos.x);
-      const roundedHeroY = Math.round(pos.y);
-      if (roundedHeroX === this.position.x && roundedHeroY === this.position.y) {
-        events.emit("HERO_EXITS")
-      }
-    })
-  }
+ready() {
+
+  this.hasExited = false;
+
+  events.on("HERO_POSITION", this, pos => {
+
+    if (this.hasExited) return;
+
+    const roundedHeroX = Math.round(pos.x);
+    const roundedHeroY = Math.round(pos.y);
+
+    if (roundedHeroX === this.position.x && roundedHeroY === this.position.y) {
+
+      this.hasExited = true;
+      console.log("Exit triggered");
+      events.emit("HERO_EXITS");
+
+    }
+
+  });
+
+}
+
+
+/*
+ready2() {
+  events.on("HERO_POSITION", this, pos => {
+
+    const roundedHeroX = Math.round(pos.x);
+    const roundedHeroY = Math.round(pos.y);
+
+    if (roundedHeroX === this.position.x && roundedHeroY === this.position.y) {
+      events.emit("HERO_FART")
+    }
+
+  })
+}
+
+*/
+
+
+
+
 }

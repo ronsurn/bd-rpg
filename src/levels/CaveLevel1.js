@@ -12,6 +12,11 @@ import {Npc3} from "../objects/Npc/Npc3.js";
 import {NpcToh} from "../objects/Npc/Npc-toh.js";
 import { GET_BALL, GET_GLOVE, storyFlags, USE_REMEDY, GET_BANANA, USE_BALL, USE_GLOVE} from "../StoryFlags.js";
 import { NpcNai } from "../objects/Npc/Npc-nai.js";
+import fart from "../objects/sound/fart.mp3";
+//import {NpcToh} from "../objects/src/SoundTrigger.js";
+
+const doFart = new Audio(fart)
+
 
 const DEFAULT_HERO_POSITION = new Vector2(gridCells(6), gridCells(5))
 
@@ -121,7 +126,7 @@ const npcNai = new NpcNai(gridCells(8), gridCells(1), {
       content: [
              
         {
-          string: "Visit Instagram nRtech2026, you'll get your treasure",
+          string: "Visit Instagram NRTech2026, you'll get your treasure",
           requires: [USE_BALL],
         },
         {
@@ -265,5 +270,69 @@ this.walls.add(`288,112`);
       }))
     })
   }
+
+
+
+ready() {
+
+
+  events.on("HERO_EXITS", this, () => {
+
+    events.emit("CHANGE_LEVEL", new OutdoorLevel1({
+      heroPosition: new Vector2(gridCells(6), gridCells(5))
+    }));
+
+  });
+
+
+  events.on("HERO_POSITION", this, pos => {
+
+    const roundedHeroX = Math.round(pos.x);
+    const roundedHeroY = Math.round(pos.y);
+
+    if (roundedHeroX === 16*16 && roundedHeroY === 2*16) {
+      doFart.play();
+    }
+
+  });
+
+}
+
+
+
+
+  /*
+
+  ready() {
+  events.on("HERO_POSITION", this, pos => {
+
+    const roundedHeroX = Math.round(pos.x);
+    const roundedHeroY = Math.round(pos.y);
+
+    if (roundedHeroX === 16*16 && roundedHeroY === 2*16) {
+      doFart.play();
+      //events.unsubscribe(this);
+    }
+
+  })
+}
+ 
+
+
+  ready2() {
+    events.on("HERO_FART", this, () => {
+
+      doFart.play()
+events.unsubscribe(this);
+
+    })
+
+      
+  }
+*/
+
+
+
+
 
 }

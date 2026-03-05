@@ -79,7 +79,7 @@ export class Input {
     if (this.heldDirections.indexOf(direction) === -1) {
       this.heldDirections.unshift(direction);
   
-            walking.loop = true;
+           walking.loop = true;
       walking.play();
   
 
@@ -92,7 +92,7 @@ export class Input {
       return;
     }
     // Remove this key from the list
-    walking.pause(10);
+   walking.pause(10);
     this.heldDirections.splice(index, 1);
   }
 }

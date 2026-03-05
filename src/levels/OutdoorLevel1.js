@@ -17,6 +17,12 @@ import {NpcMonkey} from "../objects/Npc/Npc-monkey.js";
 import {Ball} from "../objects/Rod/Ball.js";
 import {Melon} from "../objects/Rod/Melon.js";
 import {Glove} from "../objects/Rod/Glove.js";
+//import getSound from "../objects/sound/get-item.mp3";
+//import fart from "../objects/sound/fart.mp3";
+//import {NpcToh} from "../objects/src/SoundTrigger.js";
+
+//const doFart = new Audio(fart)
+
 
 const DEFAULT_HERO_POSITION = new Vector2(gridCells(6),gridCells(5))
 
@@ -50,7 +56,7 @@ const npcMaa = new NpcMaa(gridCells(11), gridCells(3), {
       content: [
           
          {
-          string: "Hon, Thank you for taking care of Jon, Happy Birthday",
+          string: "Hon, Thank you for taking care of John, Happy Birthday",
           requires: [USE_REMEDY],
         },
         {
@@ -59,7 +65,7 @@ const npcMaa = new NpcMaa(gridCells(11), gridCells(3), {
           //addsFlag: USE_MELON,
                             },
         {
-          string: "Hon, could you take a look at Jon, He's seem not very well, ... it is a hot day, even i feel thirsty",
+          string: "Hon, could you take a look at John, He's seem not very well, ... it is a hot day, even i feel thirsty",
           requires: [],
                   }
 
@@ -76,7 +82,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
           
         
         {
-          string: "Woter Meloon ! !! Tank-Koo .... I leave after FinNid Woter Meloon ",
+          string: "Voter Meloon ! !! Tank-Koo .... Please tell Paaa, I vill return Glove ",
           requires: [GET_BANANA],
           addsFlag: USE_BANANA,
                             },
@@ -149,7 +155,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
 /////////////////////////////////////////////////////////////////////
 
 
-const npcRon = new NpcRon(gridCells(42), gridCells(4), {
+const npcRon = new NpcRon(gridCells(40), gridCells(4), {
       content: [
              
         {
@@ -306,15 +312,17 @@ this.walls.add(`192,64`);
 this.walls.add(`192,80`);
   }
 
-
-
   ready() {
     events.on("HERO_EXITS", this, () => {
+
+    //  getRod.play();
       events.emit("CHANGE_LEVEL", new CaveLevel1({
         heroPosition: new Vector2(gridCells(3), gridCells(4))
+
       }))
     })
-  }
 
+  }
+  
 
 }
