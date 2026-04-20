@@ -82,6 +82,10 @@ export class Hero extends GameObject {
     })
 
 
+      events.on("HERO_PICKS_UP_ITEM_LURE", this, data => {
+      this.onPickUpItem(data)
+    })
+
   }
 
   ready() {

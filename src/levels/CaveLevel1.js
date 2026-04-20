@@ -6,11 +6,13 @@ import {gridCells} from "../helpers/grid.js";
 import {Exit } from "../objects/Exit/Exit.js";
 import {Hero} from "../objects/Hero/Hero.js";
 import {Banana} from "../objects/Rod/Banana.js";
+import {Lureitem} from "../objects/Rod/Lureitem.js";
+
 import {events} from "../Events.js";
 import {OutdoorLevel1} from "./OutdoorLevel1.js";
 import {Npc3} from "../objects/Npc/Npc3.js";
 import {NpcToh} from "../objects/Npc/Npc-toh.js";
-import { GET_BALL, GET_GLOVE, storyFlags, USE_REMEDY, GET_BANANA, USE_BALL, USE_GLOVE} from "../StoryFlags.js";
+import { GET_BALL, GET_LURE, GET_GLOVE, storyFlags, USE_REMEDY, GET_BANANA, USE_BALL, USE_GLOVE} from "../StoryFlags.js";
 import { NpcNai } from "../objects/Npc/Npc-nai.js";
 import fart from "../objects/sound/fart.mp3";
 //import {NpcToh} from "../objects/src/SoundTrigger.js";
@@ -47,12 +49,15 @@ export class CaveLevel1 extends Level {
     //const ball = new Ball(gridCells(9), gridCells(6))
     //this.addChild(ball)
     
- const banana = new Banana(gridCells(16), gridCells(7))
+ const banana = new Banana(gridCells(16), gridCells(1))
         if(storyFlags.flags.has(GET_BANANA))
       {this.removeChild(banana)}
     else {this.addChild(banana)}
  
- 
+  const lureitem = new Lureitem(gridCells(16), gridCells(7))
+        if(storyFlags.flags.has(GET_LURE))
+      {this.removeChild(lureitem)}
+    else {this.addChild(lureitem)}
     
 
 
@@ -91,7 +96,7 @@ const npc3 = new Npc3(gridCells(12), gridCells(5), {
           },
         
         {
-          string: "Ahh, PenPhak's glove, I'll beat that's Ghost down !!",
+          string: "Ahh, PenPhak's glove, I'll beat that Ghost down !!",
           requires: [GET_GLOVE],
           addsFlag: USE_GLOVE,
                   },
@@ -130,7 +135,7 @@ const npcNai = new NpcNai(gridCells(8), gridCells(1), {
           requires: [USE_BALL],
         },
         {
-          string: "My footbal !! thank you !! .. Listen, I'll tell you a secret ....",
+          string: "My football !! thank you !! .. Listen, I'll tell you a secret ....",
           requires: [GET_BALL],
          // bypass: [GET_BALL],
           addsFlag: USE_BALL,

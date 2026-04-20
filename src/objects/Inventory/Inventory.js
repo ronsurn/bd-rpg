@@ -73,6 +73,18 @@ events.on("HERO_PICKS_UP_ITEM3", this, data => {
        })
 
 
+    events.on("HERO_PICKS_UP_ITEM_LURE", this, data => {
+      this.nextId += 1;
+      this.items.push({
+        id: this.nextId,
+        image: resources.images.lureitem
+      })
+      this.renderInventory();
+       })
+
+
+
+
 
     // Demo removing of something (could happen on item use)
     // setTimeout(() => {

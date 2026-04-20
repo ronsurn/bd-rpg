@@ -9,6 +9,7 @@ class Resources {
       glove: "/sprites/glove.png",
       melon: "/sprites/melon.png",
       banana: "/sprites/banana.png",
+      lureitem: "/sprites/lureitem.png",
       exit: "/sprites/exit.png",
       // Outdoor
       sky: "/sprites/sky.png",

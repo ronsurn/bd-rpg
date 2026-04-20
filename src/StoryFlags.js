@@ -55,5 +55,7 @@ export const USE_BALL = 'USE_BALL';
 export const USE_REMEDY = 'USE_REMEDY';
 export const USE_BANANA = 'USE_BANANA';
 
+export const GET_LURE = 'GET_LURE';
+
 
 export const storyFlags = new StoryFlags();

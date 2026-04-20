@@ -82,7 +82,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
           
         
         {
-          string: "Voter Meloon ! !! Tank-Koo .... Please tell Paaa, I vill return Glove ",
+          string: "Voter Maloon ! !! Tank-Koo .... Please tell Paaa, I vill return Glove ",
           requires: [GET_BANANA],
           addsFlag: USE_BANANA,
                             },
@@ -110,7 +110,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
       //content: "I am the first NPC!",
       content: [
         {
-          string: "See your birthday Gift !! .... youtube.com watch?v=WxAAAFJF8gs",
+          string: "See your Birthday and Graduation Gift !! .... youtube.com watch?v=WxAAAFJF8gs",
           requires: [USE_REMEDY],
         },
         {
