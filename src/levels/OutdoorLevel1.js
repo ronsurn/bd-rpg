@@ -60,7 +60,7 @@ const npcMaa = new NpcMaa(gridCells(11), gridCells(3), {
           requires: [USE_REMEDY],
         },
         {
-          string: "Sweety!, thanks for the water, BTW, Paa+ can wipe out your ghost issue",
+          string: "Sweety!, thanks for the water, BTW, Paa+ can wipe out the ghost issue",
           requires: [GET_MELON],
           //addsFlag: USE_MELON,
                             },
@@ -82,7 +82,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
           
         
         {
-          string: "Voter Maloon ! !! Tank-Koo .... Please tell Paaa, I vill return Glove ",
+          string: "Voter Maloon ! !! Tank-Koo .... Please tell Paaa, I vill him return Glove ",
           requires: [GET_BANANA],
           addsFlag: USE_BANANA,
                             },
@@ -100,9 +100,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
     
     //this.addChild(npcMonkey);
 
-
-
-
+    
 /////////////////////////////////////////////////////////////////////
 
 
@@ -110,7 +108,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
       //content: "I am the first NPC!",
       content: [
         {
-          string: "See your Birthday and Graduation Gift !! .... youtube.com watch?v=WxAAAFJF8gs",
+          string: "See your Birthday Gift !! .... youtube.com watch?v equal WxAAAFJF8gs",
           requires: [USE_REMEDY],
         },
         {
@@ -155,11 +153,11 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
 /////////////////////////////////////////////////////////////////////
 
 
-const npcRon = new NpcRon(gridCells(40), gridCells(4), {
+const npcRon = new NpcRon(gridCells(44), gridCells(4), {
       content: [
              
         {
-          string: "Nong-Nah HBD, After you graduated, may I ask you something ?",
+          string: "May I ask you something ?",
           requires: [],
         }
       ],
@@ -171,8 +169,6 @@ const npcRon = new NpcRon(gridCells(40), gridCells(4), {
 ////////////////////////////////////////////////////////////////////
 
 
-
-
 const ball = new Ball(gridCells(11), gridCells(10))
 //this.addChild(ball)
 
@@ -181,7 +177,7 @@ if(storyFlags.flags.has(GET_BALL))
     else {this.addChild(ball)}
 
   
-            const glove = new Glove(gridCells(1), gridCells(9))
+const glove = new Glove(gridCells(1), gridCells(9))
 if(storyFlags.flags.has(GET_GLOVE))
       {this.removeChild(glove)}
     else {this.addChild(glove)}
