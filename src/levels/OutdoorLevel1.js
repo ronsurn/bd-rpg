@@ -82,7 +82,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
           
         
         {
-          string: "Voter Maloon ! !! Tank-Koo .... Please tell Paaa, I vill him return Glove ",
+          string: "Vater Maloon ! !! Tank-Koo .... Please tell Paa+, I vill him Glove return",
           requires: [GET_BANANA],
           addsFlag: USE_BANANA,
                             },
@@ -108,11 +108,11 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
       //content: "I am the first NPC!",
       content: [
         {
-          string: "See your Birthday Gift !! .... youtube.com watch?v equal WxAAAFJF8gs",
+          string: "See your Birthday Gift !! .... youtu.be lTployA6AZM",
           requires: [USE_REMEDY],
         },
         {
-          string: "Thank you for the Remedy !!! , Ni-Nah, I'm good now .... and ....",
+          string: "Thank you for the Remedy !!! , Ni-Nah, I'm good now .... AND ....",
           requires: [GET_REMEDY],
           //bypass: [GET_REMEDY],
           addsFlag: USE_REMEDY,
@@ -144,8 +144,6 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
 
     if(storyFlags.flags.has(USE_GLOVE))
     {this.removeChild(ghost)} else {this.addChild(ghost)}
-
-
 
 
 
