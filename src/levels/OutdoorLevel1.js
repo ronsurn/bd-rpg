@@ -56,7 +56,7 @@ const npcMaa = new NpcMaa(gridCells(11), gridCells(3), {
       content: [
           
          {
-          string: "Hon, Thank you for taking care of John, Happy Birthday",
+          string: "Hon, Thank you for taking care of John !",
           requires: [USE_REMEDY],
         },
         {
@@ -108,7 +108,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
       //content: "I am the first NPC!",
       content: [
         {
-          string: "See your Birthday Gift !! .... youtu.be lTployA6AZM",
+          string: "See your Gift !! .... youtu.be lTployA6AZM",
           requires: [USE_REMEDY],
         },
         {
