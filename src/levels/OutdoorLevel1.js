@@ -118,7 +118,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
           addsFlag: USE_REMEDY,
         },
         {
-          string: "Ni-Nah, I'm feel unwell, gimme Remedy",
+          string: "Ni-Nah, I feel unwell, gimme Remedy",
           requires: [],
         }
       ],
@@ -146,8 +146,7 @@ const npcMonkey = new NpcMonkey(gridCells(2), gridCells(9), {
     {this.removeChild(ghost)} else {this.addChild(ghost)}
 
 
-
-
+    
 /////////////////////////////////////////////////////////////////////
 
 
